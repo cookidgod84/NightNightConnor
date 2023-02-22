@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.NightNightConnor.AppBarOverlay">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.NightNightConnor.PopupOverlay" />
 
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <include layout="@layout/content_main" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+    <EditText
+        android:id="@+id/editHour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:hint="hours"
+        android:ems="10"
+        android:inputType="number"
+        tools:ignore="HardcodedText" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <EditText
+        android:id="@+id/editMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="minutes"
+        android:ems="10"
+        android:inputType="number"
+        tools:ignore="HardcodedText" />
+
+    <Switch
+        android:id="@+id/AM_PM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="am/pm"
+        tools:ignore="HardcodedText" />
+
+    <Switch
+        android:id="@+id/on_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="on/off"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/savebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save changes" />
+
+
+</LinearLayout>
